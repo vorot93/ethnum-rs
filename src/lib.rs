@@ -13,6 +13,7 @@ extern crate alloc;
 mod cmp;
 mod convert;
 mod fmt;
+mod impls;
 pub mod intrinsics;
 mod iter;
 mod ops;

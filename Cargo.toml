@@ -13,13 +13,18 @@ keywords = ["integer", "u256", "ethereum"]
 categories = ["cryptography::cryptocurrencies", "mathematics", "no-std"]
 
 [workspace]
-members = [
-  "bench",
-  "intrinsics",
-]
+members = ["bench", "intrinsics"]
 
 [features]
 llvm-intrinsics = ["ethnum-intrinsics"]
+serde = ["impl-serde", "crate-serde"]
+default = ["serde"]
 
 [dependencies]
 ethnum-intrinsics = { version = "1", path = "intrinsics", optional = true }
+impl-serde = { version = "0.3", default-features = false, optional = true }
+crate-serde = { package = "serde", version = "1", optional = true }
+
+[dev-dependencies]
+crate-serde = { package = "serde", version = "1", features = ["derive"] }
+serde_json = "1"
