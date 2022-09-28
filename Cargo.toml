@@ -16,12 +16,7 @@ categories = ["cryptography::cryptocurrencies", "mathematics", "no-std"]
 features = ["macros", "serde"]
 
 [workspace]
-members = [
-  "bench",
-  "fuzz",
-  "intrinsics",
-  "macros",
-]
+members = ["bench", "fuzz", "intrinsics", "macros"]
 
 [features]
 llvm-intrinsics = ["ethnum-intrinsics"]
@@ -30,6 +25,7 @@ macros = ["ethnum-macros"]
 [dependencies]
 ethnum-intrinsics = { version = "1", path = "intrinsics", optional = true }
 ethnum-macros = { version = "1", path = "macros", optional = true }
+fixed-byterepr = { version = "1", optional = true }
 rlp = { version = "0.5", optional = true }
 serde = { version = "1", default-features = false, optional = true }
 scale = { package = "parity-scale-codec", version = "3", features = [
