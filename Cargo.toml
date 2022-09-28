@@ -30,6 +30,7 @@ macros = ["ethnum-macros"]
 [dependencies]
 ethnum-intrinsics = { version = "1", path = "intrinsics", optional = true }
 ethnum-macros = { version = "1", path = "macros", optional = true }
+eio = { version = "0.1", default-features = false, optional = true }
 rlp = { version = "0.5", optional = true }
 serde = { version = "1", default-features = false, optional = true }
 scale = { package = "parity-scale-codec", version = "3", features = [
